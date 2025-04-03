@@ -1,0 +1,279 @@
+/**********************
+ * SETTINGS OVERRIDES *
+ **********************/
+
+// GLOBAL FORM CONTENT
+$global-form-content-height: 40;
+$global-form-content-text-color: #111111;
+$global-form-content-border-color: #bababa;
+
+// THEME COLORS
+$primary: #2775ab;
+$nautilus: #253858;
+$doctor: #f8f9fa;
+$beluga: #f1f1f1;
+$secondary: #6d6d6d;
+$trinary: #b52c6e;
+$bg-auth: #f3f2f3;
+$developer-card: #f5f5f5;
+$bg-home-secondary: #f8f8f8;
+$sub-text: #5c5c5c;
+$raven-black: #3d3d3d;
+$bg-areafooter: #343434;
+$chromaphobic-black: #292929;
+$chinese-silver: #c8c8c8;
+$lucky_grey: #767676;
+$knight-s-armor: #5c5c5c;
+$dark-liver: #4e4e4e;
+$radio-label: #9d9d9d;
+$checkbox-label: #606060;
+$crystal-Bell: #efefef;
+$icon-border: #c9c9c9;
+$floor-plan-border: #e7dddd;
+$quaternary: #cc3369;
+$hydrargyrum: #9b9b9b;
+$light-black: #292929;
+$image-info: #fdb931;
+$image-text: #f5e4c6;
+$gray-text: #3c4858;
+$danger: $quaternary;
+$white: #ffffff;
+$black-panther: #424242;
+$black: #000000;
+$footer-bg: #191919;
+$input-background-color: #374047;
+$success: green;
+$filter-border: #d2d2d2;
+$ad-card: #a03682;
+$ad-card-two: #2775ab;
+$accordion: #cdcdcd;
+$thamar-black: #191919;
+$yellow-button: #fdf541;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "trinary": $trinary,
+  "quaternary": $quaternary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "blue": $blue,
+  "white": $white,
+  "error": $danger,
+  "filter-border": $filter-border,
+);
+
+$brand-light-grey: #f9fbfc;
+$brand-link: #006db4;
+$placeholder-color: #7d8fb3;
+$gray-color: #fafbfc;
+$task-shadow-color: #26334d08;
+$table-border: #f2f3f5;
+$title-bar-shadow: #26334d08;
+$header-btn-bg: linear-gradient(90deg, #9d3483 0%, #c74b74 100%);
+$header-top-bg: linear-gradient(90deg, #2975ab 10%, #b52c6e 100%);
+$bg-post-property: rgba(0, 0, 0, 0.5);
+$primary-10: #2775ab1a;
+$primary-40: #eef3fa66;
+$primary-light: #d3e1f4;
+$places-filter-border: #bebebe;
+$trinary-light: #d18cb0;
+
+// SPACERS
+$spacers: (
+  0: 0,
+  1: calc($spacer / 4),
+  2: calc($spacer / 2),
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 3.5,
+  9: $spacer * 4,
+  10: $spacer * 4.5,
+  11: $spacer * 5,
+  12: $spacer * 5.5,
+  13: $spacer * 6,
+  14: $spacer * 6.5,
+  15: $spacer * 7,
+  16: $spacer * 7.5,
+  17: $spacer * 8,
+  18: $spacer * 8.5,
+  19: $spacer * 9,
+  20: $spacer * 9.5,
+  21: $spacer * 10,
+);
+
+// GRID BREAKPOINTS
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// CONTAINER MAX WIDTHS
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+// TYPOGRAPHY
+$font-family-base: "Nunito Sans";
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 1.875;
+$h3-font-size: $font-size-base * 1.625;
+$h4-font-size: $font-size-base * 1.125;
+$h5-font-size: $font-size-base;
+$h6-font-size: $font-size-base;
+
+$font-sizes: (
+  1: $font-size-base * 0.063,
+  2: $font-size-base * 0.125,
+  3: $font-size-base * 0.188,
+  4: $font-size-base * 0.25,
+  5: $font-size-base * 0.313,
+  6: $font-size-base * 0.375,
+  7: $font-size-base * 0.438,
+  8: $font-size-base * 0.5,
+  9: $font-size-base * 0.563,
+  10: $font-size-base * 0.625,
+  11: $font-size-base * 0.688,
+  12: $font-size-base * 0.75,
+  13: $font-size-base * 0.813,
+  14: $font-size-base * 0.875,
+  15: $font-size-base * 0.938,
+  16: $font-size-base * 1,
+  17: $font-size-base * 1.063,
+  18: $font-size-base * 1.125,
+  19: $font-size-base * 1.188,
+  20: $font-size-base * 1.25,
+  21: $font-size-base * 1.313,
+  22: $font-size-base * 1.375,
+  23: $font-size-base * 1.438,
+  24: $font-size-base * 1.5,
+  25: $font-size-base * 1.563,
+  26: $font-size-base * 1.625,
+  27: $font-size-base * 1.688,
+  28: $font-size-base * 1.75,
+  29: $font-size-base * 1.813,
+  30: $font-size-base * 1.875,
+  31: $font-size-base * 1.938,
+  32: $font-size-base * 2,
+  33: $font-size-base * 2.063,
+  34: $font-size-base * 2.125,
+  35: $font-size-base * 2.188,
+  36: $font-size-base * 2.25,
+  37: $font-size-base * 2.313,
+  38: $font-size-base * 2.375,
+  39: $font-size-base * 2.438,
+  40: $font-size-base * 2.5,
+);
+
+// BUTTONS
+$btn-border-width: 0;
+$btn-padding-y: $font-size-base * 1;
+$btn-padding-x: $font-size-base * 1.5;
+$btn-font-size: $font-size-base * 1.125;
+$btn-padding-y-sm: $font-size-base * 0.875;
+$btn-padding-x-sm: $font-size-base * 1.25;
+$btn-font-size-sm: $font-size-base * 0.875;
+$btn-padding-y-lg: $font-size-base * 1.25;
+$btn-padding-x-lg: $font-size-base * 2;
+$btn-font-size-lg: $font-size-base * 1.25;
+$btn-font-weight: $font-weight-bold;
+$btn-box-shadow: 0;
+$btn-focus-width: 0;
+$btn-focus-box-shadow: 0;
+
+// FORMS
+$input-padding-y: $font-size-base * 1;
+$input-padding-x: $font-size-base * 1.125;
+$input-font-size: $font-size-base * 1.125;
+$input-padding-y-sm: $font-size-base * 0.875;
+$input-padding-x-sm: $font-size-base * 1;
+$input-font-size-sm: $font-size-base * 0.875;
+$input-padding-y-lg: $font-size-base * 1.25;
+$input-padding-x-lg: $font-size-base * 1.5;
+$input-font-size-lg: $font-size-base * 1.25;
+$input-font-weight: $font-weight-normal;
+$input-group-addon-padding-y: 1.125rem;
+$input-group-addon-padding-x: 1rem;
+$input-color: $input-background-color;
+$input-border-color: rgba($input-background-color, 0.3);
+$input-box-shadow: 0;
+$input-focus-bg: rgba($input-background-color, 0.1);
+$input-focus-border-color: rgba($primary, 0.5);
+$input-focus-width: 0;
+$input-focus-box-shadow: 0;
+$input-height: add(
+  $input-line-height * $input-font-size,
+  add($input-padding-y * 2, $input-height-border, false)
+);
+$input-height-sm: add(
+  $input-line-height * $input-font-size-sm,
+  add($input-padding-y-sm * 2, $input-height-border, false)
+);
+$input-height-lg: add(
+  $input-line-height * $input-font-size-lg,
+  add($input-padding-y-lg * 2, $input-height-border, false)
+);
+
+// NAVS
+$nav-link-padding-y: 0;
+$nav-link-padding-x: 0;
+$nav-link-font-size: 25px;
+$nav-link-color: $black;
+$nav-link-hover-color: $black;
+
+// NAVBAR
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+
+// DROPDOWNS
+$dropdown-padding-y: 0;
+$dropdown-font-size: 25px;
+$dropdown-link-color: $black;
+$dropdown-item-padding-y: calc($spacer / 3);
+$dropdown-link-active-bg: $primary;
+$dropdown-link-active-color: $black;
+
+// PAGINATION
+$pagination-padding-y: 0.625rem;
+$pagination-padding-x: 0.75rem;
+$pagination-color: #1e282e;
+$pagination-border-radius: 10px;
+$pagination-border-color: #f0f2f7;
+$pagination-active-color: #1e282e;
+$pagination-active-bg: #f0f2f7;
+$pagination-active-border-color: #f0f2f7;
+
+//BORDER
+$border-width: 1px;
+$--bs-border-color: #dee2e6;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+);
+
+@use "sass:math";
+
+$base: 16 !default;
+
+@function rem-calc($value) {
+  $remValue: math.div($value, $base) + rem;
+  @return $remValue;
+}

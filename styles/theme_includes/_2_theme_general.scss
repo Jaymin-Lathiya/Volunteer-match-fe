@@ -1,0 +1,1071 @@
+// 1. PAGE FULL HEIGHT CLASS
+// 2. OVERFLOW CLASSES
+// 3. FONT SIZE CLASSES
+// 4. LINE HEIGHT CLASSES
+// 5. FONT WEIGHT CLASSES
+// 6. TEXT COLOR CLASSES
+// 7. BACKGROUND COLOR CLASSES
+
+// 8. BORDER COLOR
+// 8.1 ALL SIDE BORDER COLOR CLASS
+// 8.2 SINGLE SIDE BORDER COLOR CLASS
+
+// 9. BORDER RADIUS
+// 9.1 ALL CORNER BORDER RADIUS CLASSES
+// 9.2 ONLY ONE CORNER BORDER RADIUS CLASSES
+// 9.3 TOP AND BOTTOM BOTH CORNER BORDER RADIUS CLASSES
+// 9.4 LEFT AND RIGHT BOTH CORNER BORDER RADIUS CLASSES
+// 10. MARGINx
+// 11. PADDING
+// 12. WIDTH CLASSES
+// 13. HEIGHT CLASSES
+// 14. Z-INDEX
+// 15. HIDE BG IMAGE BY BREAKPOINT
+// 16. CURSOR POINTER
+// 17. BACKGROUND POSITION AND SIZE CLASSES
+// 18. INLINE CLASSES
+// 19. REMOVE BR TAG CLASS
+// 20. BOX-SHADOW
+// 21. EXTRA CLASSES
+
+:root {
+  letter-spacing: rem-calc(0);
+}
+
+body {
+  zoom: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Nunito Sans" !important;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $primary-40;
+    border-radius: rem-calc(3);
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: rem-calc(6);
+    height: rem-calc(6);
+    border-radius: rem-calc(3);
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: rem-calc(3);
+    background-color: $primary;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 80%;
+  }
+
+  h1 {
+    font-weight: 800;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+  }
+
+  p,
+  a {
+    font-size: rem-calc(14);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 1. PAGE FULL HEIGHT CLASS
+
+.full-page-height {
+  min-height: 100vh;
+  height: 100vh;
+}
+
+// 2. OVERFLOW CLASSES
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+// 3. FONT SIZE CLASSES
+// Add desire font size(px) in $font-size-value list
+// To Use class : eg. fs-52
+// for 1 to 40 px use fs-1 to fs-40
+
+// $font-size-value: 42, 52;
+// @each $value in $font-size-value {
+//   .fs-#{$value} {
+//     font-size: rem-calc($value);
+//   }
+// }
+
+// 4. LINE HEIGHT CLASSES
+// Add desire line-height(px) in $line-height-value list
+// To Use class : eg. line-height-52
+
+$line-height-value: 10, 14, 15, 16, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 30,
+  33, 36, 39, 49, 52, 54, 57, 60, 78;
+@each $value in $line-height-value {
+  .line-height-#{$value} {
+    line-height: rem-calc($value);
+  }
+}
+
+// 5. FONT WEIGHT CLASSES
+// To Use class : eg. font-bold
+
+$font-weight-list: (
+  "extra-lighter": 100,
+  "lighter": 200,
+  "light": 300,
+  "normal": 400,
+  "weight-medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "medium-bold": 800,
+  "extrabold": 900,
+);
+
+@each $font-weight-name, $value in $font-weight-list {
+  .font-#{$font-weight-name} {
+    font-weight: $value;
+  }
+}
+
+// 6. TEXT COLOR CLASSES
+// Add desire text color in $text-color-name-list list
+// To Use class : eg. alt-primary
+
+$text-color-name-list: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "trinary": $trinary,
+  "radio-label": $radio-label,
+  "checkbox-label": $checkbox-label,
+  "light-black": $light-black,
+  "chinese-silver": $chinese-silver,
+  "chromaphobic-black": $chromaphobic-black,
+  "knight-s-armor": $knight-s-armor,
+  "sub-text": $sub-text,
+  "crystal-Bell": $crystal-Bell,
+  "hydrargyrum": $hydrargyrum,
+  "raven-black": $raven-black,
+  "lucky-grey": $lucky_grey,
+  "nautilus": $nautilus,
+  "black-panther": $black-panther,
+  "gray-text": $gray-text,
+  "yellow-button": $yellow-button,
+);
+
+@each $color-name, $value in $text-color-name-list {
+  .text-#{$color-name} {
+    color: $value;
+  }
+}
+
+// 7. BACKGROUND COLOR CLASSES
+// Add desire background color in $background-color-name-list list
+// To Use class : eg. bg-primary
+
+$background-color-name-list: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "beluga": $beluga,
+  "auth": $bg-auth,
+  "trinary": $trinary,
+  "footer": $footer-bg,
+  "area-footer": $bg-areafooter,
+  "home-secondary": $bg-home-secondary,
+  "post-property": $bg-post-property,
+  "img-info": $image-text,
+  "crystal-Bell": $crystal-Bell,
+  "white": $white,
+  "ad-card": $ad-card,
+  "ad-card-two": $ad-card-two,
+  "primary-40": $primary-40,
+  "primary-10": $primary-10,
+  "primary-light": $primary-light,
+  "accordion": $accordion,
+  "trinary-light": $trinary-light,
+  "thamar-black": $thamar-black,
+  "developer-card": $developer-card,
+);
+
+@each $bg-color-name, $value in $background-color-name-list {
+  .bg-#{$bg-color-name} {
+    background-color: $value;
+  }
+}
+
+// BACKGROUND
+
+$background-name-list: (
+  "header-top": $header-top-bg,
+  "header-btn": $header-btn-bg,
+);
+
+@each $bg-name, $value in $background-name-list {
+  .bg-#{$bg-name} {
+    background: $value;
+  }
+}
+
+// 8. BORDER COLOR
+
+// 8.1 ALL SIDE BORDER COLOR CLASS
+// Add desire border color in $all-border-color-name-list list
+// Add desire border thickness(px) in $all-border-value list
+// To Use class : eg. border-primary-1px
+
+$all-border-value: 1, 2, 3;
+$all-border-color-name-list: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "img-upload-warning": $image-info,
+  "icon": $icon-border,
+  "active": $primary,
+  "floor-plan-border": $floor-plan-border,
+  "filter-border": $filter-border,
+);
+
+@each $color-name, $color-value in $all-border-color-name-list {
+  @each $value in $all-border-value {
+    .border-#{$color-name}-#{$value}px {
+      border: rem-calc($value) solid $color-value;
+    }
+  }
+}
+
+// 8.2 SINGLE SIDE BORDER COLOR CLASS
+// Add desire border color in $single-side-border-color-name-list list
+// Add desire border thickness(px) in $single-side-border-value list
+// To Use class : eg. border-left-primary-1px
+
+$single-side-border-value: 1, 2, 3;
+$single-side-border-color-name-list: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "auth": $bg-auth,
+  "dark-liver": $dark-liver,
+  "filter-border": $filter-border,
+  "crystal-Bell": $crystal-Bell,
+  "icon-border": $icon-border,
+  "accordion": $accordion,
+  "places-filter": $places-filter-border,
+);
+$border-sides: "top", "bottom", "left", "right";
+
+@each $border-side in $border-sides {
+  @each $color-name, $color-value in $single-side-border-color-name-list {
+    @each $value in $single-side-border-value {
+      .border-#{$border-side}-#{$color-name}-#{$value}px {
+        border-#{$border-side}: rem-calc($value) solid $color-value;
+      }
+    }
+  }
+}
+
+// 9. BORDER RADIUS
+
+// 9.1 ALL CORNER BORDER RADIUS CLASSES
+// Add desire radius(px) in $radius-all-four-corners-value list
+// To Use class : eg. border-radius-5 (all four corners)
+
+$radius-all-four-corners-values: 2,4, 5, 6, 8, 10, 12, 16, 20, 25, 50, 100;
+
+@each $radius-value in $radius-all-four-corners-values {
+  .border-radius-#{$radius-value} {
+    border-radius: rem-calc($radius-value);
+  }
+}
+
+// 9.2 ONLY ONE CORNER BORDER RADIUS CLASSES
+// Add desire radius(px) in $radius-one-corner-values list
+// eg. border-top-left-radius-5 (for top left corners)
+// eg. border-top-right-radius-5 (for top right corners)
+// eg. border-bottom-left-radius-5 (for bottom left corners)
+// eg. border-bottom-right-radius-5 (for bottom right corners)
+
+$radius-one-corner-values: 0, 4, 5, 6, 8, 10, 12, 15, 30;
+$radius-one-corner-name: "top-left", "top-right", "bottom-right", "bottom-left";
+
+@each $radius-one-corner in $radius-one-corner-name {
+  @each $radius-value in $radius-one-corner-values {
+    .border-#{$radius-one-corner}-radius-#{$radius-value} {
+      border-#{$radius-one-corner}-radius: rem-calc($radius-value);
+    }
+  }
+}
+
+// 9.3 TOP AND BOTTOM BOTH CORNER BORDER RADIUS CLASSES
+// Add desire radius(px) in $radius-positions-values list
+// eg. border-top-radius-5 (for top left and right corners)
+// eg. border-bottom-radius-5 (for bottom left and right corners)
+
+$radius-positions-values: 5, 10;
+$radius-positions: "top", "bottom";
+
+@each $radius-position in $radius-positions {
+  @each $radius-value in $radius-positions-values {
+    .border-#{$radius-position}-radius-#{$radius-value} {
+      border-#{$radius-position}-left-radius: rem-calc($radius-value);
+      border-#{$radius-position}-right-radius: rem-calc($radius-value);
+    }
+  }
+}
+
+// 9.4 LEFT AND RIGHT BOTH CORNER BORDER RADIUS CLASSES
+// Add desire radius(px) in $radius-sides-values list
+// eg. border-left-radius-5 (for top and bottom left corners)
+// eg. border-right-radius-5 (for top and bottom right corners)
+
+// $radius-sides-values : 5,
+// 10,
+// ;
+// $radius-sides: "left", "right";
+
+// @each $radius-side in $radius-sides {
+//     @each $radius-value in $radius-sides-values {
+//         .border-#{$radius-side}-radius-#{$radius-value} {
+//             border-top-#{$radius-side}-radius: rem-calc($radius-value);
+//             border-bottom-#{$radius-side}-radius: rem-calc($radius-value);
+//         }
+//     }
+// }
+
+// 10. MARGIN
+// Add desire spacer size(px) in $$margin-space-sizes
+// To Use class : eg. margin-bottom-13
+.no-margin {
+  margin: rem-calc(0) !important;
+}
+
+$margin-space-sizes: 2, 5, 10, 12, 13, 14, 15, 18, 22, 77;
+$margin-positions: "margin-bottom", "margin-top", "margin-left", "margin-right";
+
+@each $margin-position in $margin-positions {
+  @each $px in $margin-space-sizes {
+    .#{$margin-position}-#{$px} {
+      #{$margin-position}: rem-calc($px) !important;
+    }
+  }
+}
+
+// .margin-top-minus-120 {
+//   margin-top: rem-calc(-120);
+// }
+.margin-top-minus-88 {
+  margin-top: rem-calc(-88);
+}
+// 11. PADDING
+// Add desire spacer size(px) in $padding-space-sizes
+// To Use class : eg. padding-bottom-13
+.no-padding {
+  padding: rem-calc(0) !important;
+}
+
+$padding-space-sizes: 2, 6, 8, 10, 11, 12, 13, 15, 36, 52, 60, 67, 99, 107, 108,
+  41, 49, 114, 115, 215, 26, 28, 306;
+$padding-positions: "padding-bottom", "padding-top", "padding-left",
+  "padding-right";
+
+@each $padding-position in $padding-positions {
+  @each $px in $padding-space-sizes {
+    .#{$padding-position}-#{$px} {
+      #{$padding-position}: rem-calc($px) !important;
+    }
+  }
+}
+
+// 12. WIDTH CLASSES
+
+// Add desire width(px) in $width-value list
+// To Use class : eg. w-52
+
+$width-value: 20, 30, 40, 43, 45, 48, 52, 57, 81, 94, 120, 135, 160, 190, 200,
+  204 ,232, 280, 296, 300, 334, 516;
+
+@each $value in $width-value {
+  .w-#{$value} {
+    width: rem-calc($value);
+  }
+}
+
+.min-width-fit-content {
+  min-width: fit-content;
+}
+
+.width-fit-content {
+  width: fit-content;
+}
+
+.width-webkit-fill-available {
+  width: -webkit-fill-available;
+}
+
+.width-max-content {
+  width: max-content;
+}
+.min-width-52 {
+  min-width: rem-calc(54.2);
+}
+.w-80 {
+  width: 80%;
+}
+
+// 13. HEIGHT CLASSES
+
+// Add desire height(px) in $height-value list
+// To Use class : eg. h-52
+
+$height-value: 20, 30, 40, 43, 45, 48, 52, 55, 57, 76, 80, 84, 111, 113, 160,
+  167, 215, 244, 260,285 , 300, 340, 440;
+
+@each $value in $height-value {
+  .h-#{$value} {
+    height: rem-calc($value);
+  }
+}
+
+.h-50vh {
+  height: 50vh;
+}
+
+// 14. Z-INDEX
+
+$z-index-numbers: 1, 9;
+
+@each $z-index-number in $z-index-numbers {
+  .z-index-#{$z-index-number} {
+    z-index: $z-index-number;
+  }
+}
+
+// 15. HIDE BG IMAGE BY BREAKPOINT
+
+// @include media-breakpoint-down(md) {
+//     .hide-bg-image {
+//         background-image: none !important;
+//     }
+// }
+
+// 16. CURSOR POINTER
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+.not-allowed {
+  cursor: not-allowed;
+}
+
+// 17. BACKGROUND POSITION AND SIZE CLASSES
+
+// .bg-center {
+//     background-position: center center !important;
+// }
+
+// .bg-center-top {
+//     background-position: center top !important;
+// }
+
+// .bg-center-bottom {
+//     background-position: center bottom !important;
+// }
+
+// .bg-size-cover {
+//     background-size: cover !important;
+// }
+
+// .bg-no-repeat {
+//     background-repeat: no-repeat;
+// }
+
+// .bg-repeat-x {
+//     background-repeat: repeat-x;
+// }
+
+// .bg-inherit {
+//     background: inherit !important;
+// }
+
+// .bg-position {
+//     &-top-right {
+//         background-position: top right;
+
+//         &-offset {
+//             background-position: top 45px right 24px;
+
+//             @include media-breakpoint-up(lg) {
+//                 background-position: top 60px right 30px;
+//             }
+//         }
+//     }
+
+//     &-center-right {
+//         background-position: center right;
+
+//         &-offset {
+//             background-position: top 20px right 40px;
+
+//             @include media-breakpoint-up(lg) {
+//                 background-position: top 20px right 50px;
+//             }
+//         }
+//     }
+// }
+
+// 18. INLINE CLASSES
+
+// .show-inline-container {
+//     .show-inline {
+//         @include media-breakpoint-up(sm) {
+//             width: auto;
+//             display: inline-block;
+//             vertical-align: middle;
+//             margin-bottom: 0 !important;
+
+//             +.show-inline {
+//                 margin-left: 15px;
+//             }
+//         }
+
+//         &:not(:last-child) {
+//             margin-bottom: 15px;
+//         }
+//     }
+// }
+
+// 19. REMOVE BR TAG CLASS
+
+.remove-sm-up-br {
+  @include media-breakpoint-up(sm) {
+    br {
+      display: none !important;
+    }
+  }
+}
+
+.remove-lg-down-br {
+  @include media-breakpoint-down(lg) {
+    br {
+      display: none !important;
+    }
+  }
+}
+.remove-md-down-br {
+  @include media-breakpoint-down(md) {
+    br {
+      display: none !important;
+    }
+  }
+}
+
+// 20. BOX-SHADOW
+.more-filter-shadow {
+  box-shadow: rem-calc(0) rem-calc(4) rem-calc(8) rem-calc(0) #53535340;
+}
+
+.profile-bg-shadow {
+  box-shadow: rem-calc(0) rem-calc(1) rem-calc(10) rem-calc(0) #cccccc40;
+}
+
+.become-partner-from-shadow {
+  box-shadow: rem-calc(0) rem-calc(1) rem-calc(5) rem-calc(0) #00000040;
+}
+
+.approved-plots-shadow {
+  box-shadow: rem-calc(0) rem-calc(4) rem-calc(4) rem-calc(0) #00000040;
+}
+
+.single-property-shadow {
+  box-shadow: rem-calc(0) rem-calc(1) rem-calc(4) rem-calc(0) #d3d3d340;
+}
+
+// 21. EXTRA CLASSES
+
+.image-primary-active-filter {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(6%) saturate(5154%)
+    hue-rotate(162deg) brightness(85%) contrast(96%);
+}
+
+.h1 {
+  font-size: rem-calc(40);
+}
+
+.h2 {
+  font-size: rem-calc(30);
+}
+
+.h3 {
+  font-size: rem-calc(26);
+}
+
+.h4 {
+  font-size: rem-calc(18);
+}
+
+.h5 {
+  font-size: rem-calc(16);
+}
+
+.text-ellipses {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.border-1point5-white {
+  border: 1.5px solid #d9d9d9;
+}
+
+.border-1point5-secondary {
+  border: 1.5px solid $secondary;
+}
+
+.border-1point5-trinary {
+  border: 1.5px solid $trinary;
+}
+
+.border-dashed-2-primary {
+  border: 2px dashed $primary;
+}
+
+.padding-20 {
+  padding: rem-calc(20);
+}
+
+.hide-empty-div {
+  &:empty {
+    display: none;
+  }
+}
+
+.standard-input-range {
+  .input-range__track--active {
+    background: $primary;
+  }
+  .input-range__slider {
+    background: white;
+    border: rem-calc(2) solid $primary;
+  }
+  .input-range__label {
+    display: none;
+  }
+}
+
+#builder_page_section_4,
+#become_partner_section_4 {
+  .testimonial-card {
+    .testimonial-text {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: -1.5%;
+        right: 1.5%;
+        margin: 0 auto;
+        width: 1px;
+        z-index: 15;
+        box-sizing: border-box;
+        border: 16px solid black;
+        border-radius: rem-calc(4);
+        border-color: transparent transparent #ffffff #ffffff;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -4px 4px 6px -2px #00000040;
+      }
+    }
+  }
+
+  .accordion {
+    .accordion-item {
+      background-color: transparent;
+      border: none;
+      .accordion-header {
+        .accordion-button {
+          border-radius: rem-calc(0);
+          box-shadow: none;
+          color: $white;
+          background-color: transparent;
+          padding: rem-calc(32) rem-calc(24);
+          &::after {
+            content: "";
+            background-image: url("/assets/images/minus-sign-white.svg");
+            transition: none;
+          }
+          &:not(.collapsed) {
+            &::after {
+              content: "";
+              background-image: url("/assets/images/plus-sign-white.svg");
+              transition: none;
+            }
+          }
+          &:not(.collapsed) {
+            background-color: $trinary;
+          }
+        }
+      }
+      .accordion-collapse {
+        background-color: $trinary;
+        border-radius: rem-calc(0);
+        .accordion-body {
+          padding: rem-calc(0) rem-calc(24) rem-calc(32) rem-calc(24);
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+#advertise_your_property_section_4,
+#builder_page_section_4,
+#become_partner_section_4,
+#about_us_section_1,
+#contact_us_section_1,
+#contact_us_section_4 {
+  &.maximum-deals {
+    background-image: url("/assets/images/become-partner/background-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#owner_properties,
+#immediately_available,
+#recommended_properties,
+#slider_section,
+#top_localities_section,
+#statistics_section {
+  .react-multi-carousel-list {
+    .react-multi-carousel-track {
+      .react-multi-carousel-item {
+        .property-slider-small-card {
+          width: rem-calc(240);
+        }
+      }
+    }
+    .react-multiple-carousel__arrow {
+      background: #ffffff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      &::before {
+        color: black;
+        font-size: rem-calc(26);
+      }
+      &.react-multiple-carousel__arrow--left {
+        left: rem-calc(-8);
+        &::before {
+          padding: rem-calc(0) rem-calc(2) rem-calc(2) rem-calc(0);
+        }
+      }
+      &.react-multiple-carousel__arrow--right {
+        right: rem-calc(4);
+        &::before {
+          padding: rem-calc(2) rem-calc(0) rem-calc(0) rem-calc(2);
+        }
+      }
+    }
+  }
+}
+#top_localities_section,
+#statistics_section{
+  #swiper_slider {
+    .custom-prev-button,.custom-next-button {
+      top: 60% !important;
+
+    }
+  }
+  
+}
+
+#slider_section{
+  .custom-prev-button,.custom-next-button {
+    top: 43% !important;
+
+  } 
+}
+
+#statistics_section{
+  .react-multi-carousel-list{
+    .react-multi-carousel-track {
+      .react-multi-carousel-item {
+        .property-slider-small-card {
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+
+#about_us_section {
+  .react-multi-carousel-list {
+    .react-multi-carousel-track {
+      .react-multi-carousel-item {
+        .property-slider-small-card {
+          width: 230px;
+        }
+      }
+    }
+    .react-multiple-carousel__arrow {
+      background: #ffffff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      &::before {
+        color: black;
+        font-size: rem-calc(26);
+      }
+      &.react-multiple-carousel__arrow--left {
+        left: calc(10% + 1px);
+        &::before {
+          padding: rem-calc(0) rem-calc(2) rem-calc(2) rem-calc(0);
+        }
+      }
+      &.react-multiple-carousel__arrow--right {
+        right: calc(10% + 1px);
+        &::before {
+          padding: rem-calc(2) rem-calc(0) rem-calc(0) rem-calc(2);
+        }
+      }
+    }
+  }
+}
+
+#slider_section {
+  .property-slider-small-card-image {
+    width: 230px;
+    height: 10.4375rem;
+  }
+}
+
+#floorPlanSliderSection {
+  .react-multi-carousel-list {
+    .react-multiple-carousel__arrow {
+      z-index: 9999;
+      min-height: 27px;
+      min-width: 27px;
+      background: #ffffff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      &::before {
+        color: black;
+        font-size: 14px;
+      }
+      &.react-multiple-carousel__arrow--left {
+        left: rem-calc(3);
+        &::before {
+          padding: rem-calc(0) rem-calc(2) rem-calc(2) rem-calc(0);
+        }
+      }
+      &.react-multiple-carousel__arrow--right {
+        right: rem-calc(3);
+        &::before {
+          padding: rem-calc(2) rem-calc(0) rem-calc(0) rem-calc(2);
+        }
+      }
+    }
+  }
+}
+
+#owner_properties,
+#immediately_available,
+#recommended_properties,
+#slider_section {
+  .react-multi-carousel-list {
+    .react-multiple-carousel__arrow--left,
+    .react-multiple-carousel__arrow--right {
+      top: rem-calc(136);
+    }
+  }
+}
+
+// .react-multi-carousel-list {
+//   position: static !important;
+//   .react-multi-carousel-item {
+//     &.react-multi-carousel-item--active {
+//       width: 265px !important;
+//     }
+//   }
+// }
+
+#property_card,
+#property_card_responsive,
+#user_property_card,
+#user_responsive_property_card {
+  .carousel {
+    &.conditionaly {
+      .carousel-control-prev,
+      .carousel-control-next {
+        display: none;
+      }
+    }
+    .carousel-indicators {
+      display: none;
+    }
+
+    .carousel-inner {
+      width: 100%;
+      height: 100%;
+      .carousel-item {
+        background-color: transparent;
+        background-image: linear-gradient(transparent, black);
+      }
+    }
+  }
+
+  .carousel-caption {
+    padding: rem-calc(0);
+  }
+}
+
+#property_card,
+#advertisement_card,
+#commercial_property_ad_section,
+#property_ad_section {
+  .box-shadow {
+    box-shadow: rem-calc(0) rem-calc(0) rem-calc(5) rem-calc(1) #8a8a8a40;
+  }
+}
+
+#commercial_property_ad_section,
+#property_ad_section {
+  .swiper-pagination-bullets {
+    margin-bottom: -14px;
+  }
+}
+
+.bg-land {
+  background: linear-gradient(180deg, #ecdffd 0%, #fbb8b8 100%);
+}
+
+#standard_details_view,
+#standard_icon_select_box {
+  .img-div-height {
+    height: rem-calc(100);
+  }
+}
+
+#business_partner,
+#about_us_section_1 {
+  .mask-img {
+    width: rem-calc(274);
+  }
+
+  .mask-image-right {
+    width: rem-calc(200);
+  }
+}
+
+#broker_dashboard_rent_property,
+#broker_dashboard_sell_property {
+  .advertisement-banner {
+    background-color: #185598;
+  }
+}
+
+// single project section slider
+
+#property_ad_section,
+#commercial_property_ad_section {
+  .swiper-button-next,
+  .swiper-button-prev {
+    &::after {
+      font-size: rem-calc(23);
+      padding: rem-calc(8) rem-calc(14);
+      color: black;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $primary;
+  }
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+  display: none !important;
+}.swiper-button-prev.swiper-button-disabled{
+  display: none !important;
+}.swiper-button-prev{
+  display: none !important;
+}
+#swiper_slider {
+  .custom-prev-button {
+    left: -10px;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transform: translateY(-50%);
+    &::before {
+      // content: '<';
+      content: "\e824";
+      font-family: revicons;
+      font-size: 16px;
+    }
+  }
+
+  .custom-next-button {
+    right: -7px;
+    z-index: 10;
+    transform: translateY(-50%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    &::before {
+      content: "\e825";
+      font-family: revicons;
+      font-size: 16px;
+    }
+  }
+}
+
+//to be discuss
+
+.max-w-500{
+  max-width: rem-calc(500);
+}
+
+#file_uploader {
+  .uploaded-image {
+    width: rem-calc(150);
+  }
+
+  .elipsis-file-name {
+    max-width: rem-calc(150);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .remove-file-icon {
+    height: rem-calc(22);
+    width: rem-calc(22);
+    left: 3%;
+    top: 12%;
+  }
+}
+
+.modal-content {
+  border-radius: rem-calc(10);
+}

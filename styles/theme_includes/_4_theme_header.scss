@@ -1,0 +1,251 @@
+#top_most_header_section {
+  .change-language-dropdown {
+    // .dropdown-toggle {
+    //   &::after {
+    //     content: url("../../../public/assets/images/arrow-dark.svg");
+    //     border: none;
+    //     margin-top: rem-calc(5);
+    //     padding-left: rem-calc(4);
+    //   }
+    // }
+    .dropdown-menu {
+      border: 0;
+      border-radius: rem-calc(8);
+      background: $beluga;
+      min-width: inherit;
+      margin-top: rem-calc(2);
+      left: rem-calc(-9);
+      &::before {
+        content: "";
+        position: absolute;
+        left: rem-calc(24);
+        width: rem-calc(15);
+        height: rem-calc(10);
+        background-color: $beluga;
+        margin-left: re-calc(-7);
+        transform: rotate(45deg);
+        z-index: -1;
+        top: re-calc(-2);
+        cursor: auto;
+      }
+    }
+    .dropdown-item {
+      &:active {
+        color: $primary;
+        background-color: $doctor;
+      }
+    }
+  }
+}
+
+#header_menu_section {
+  .free-button-text-position {
+    top: rem-calc(-12);
+    right: rem-calc(10);
+  }
+
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-link {
+          &:hover {
+            color: $secondary !important;
+          }
+          &.active {
+            color: $sub-text !important;
+          }
+        }
+      }
+    }
+  }
+
+  #profile_dropdown_no_login,
+  #profile_dropdown_offcanvas_no_login {
+    .btn {
+      min-width: max-content;
+    }
+  }
+}
+
+#header_menu_section,
+#broker_dashboard_header {
+  #profile_dropdown_login,
+  #profile_dropdown_no_login,
+  #profile_dropdown_offcanvas_login,
+  #profile_dropdown_offcanvas_no_login,
+  #profile_dropdown_broker {
+    .dropdown-toggle {
+      // no arrow in bootstrap dropdown.
+      &.no-arrow {
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      border: 0;
+      border-radius: 0.5rem;
+      background: $beluga;
+      min-width: inherit;
+      margin-top: 2px;
+      left: -9px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 24px;
+        // right: 22%;
+        // bottom: -20px;
+        width: 15px;
+        height: 9.37px;
+        background-color: $beluga;
+        margin-left: -7px;
+        transform: rotate(45deg);
+        z-index: 10;
+        top: -2px;
+        cursor: auto;
+      }
+      .dropdown-item {
+        line-height: rem-calc(22) !important;
+
+        &:active {
+          color: $primary;
+          background-color: $doctor;
+        }
+        &:hover {
+          min-width: inherit;
+        }
+
+        .list-item {
+          list-style-type: disc;
+          display: list-item;
+          margin-left: rem-calc(28);
+        }
+      }
+    }
+  }
+}
+
+#header_menu_section,
+#broker_dashboard_header {
+  #profile_dropdown_login,
+  #profile_dropdown_offcanvas_login,
+  #profile_dropdown_broker {
+    .btn {
+      width: rem-calc(30);
+      height: rem-calc(30);
+      min-width: rem-calc(30);
+      min-height: rem-calc(30);
+      cursor: pointer;
+      background-color: transparent;
+    }
+  }
+}
+
+// .login {
+//   &:hover {
+//     color: white !important;
+//   }
+// }
+
+
+
+//commented
+
+// #profile_dropdown {
+//   .btn {
+//     min-width: rem-calc(31);
+//     height: rem-calc(31);
+//     cursor: pointer !important;
+//   }
+
+//   .dropdown-menu {
+//     border: 0;
+//     border-radius: 0.5rem;
+//     background: $beluga;
+//     min-width: inherit;
+//     margin-top: 2px;
+//     left: -9px;
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       left: 24px;
+//       // right: 22%;
+//       // bottom: -20px;
+//       width: 15px;
+//       height: 9.37px;
+//       background-color: $beluga;
+//       margin-left: -7px;
+//       transform: rotate(45deg);
+//       z-index: 10;
+//       top: -2px;
+//       cursor: auto;
+//     }
+//   }
+//   .dropdown-item {
+//     line-height: rem-calc(22) !important;
+
+//     &:active {
+//       color: $primary;
+//       background-color: $doctor;
+//     }
+//     &:hover {
+//       min-width: inherit;
+//     }
+//   }
+
+//   .list-item {
+//     list-style-type: disc;
+//     display: list-item;
+//     margin-left: rem-calc(28);
+//   }
+// }
+
+// #profile_dropdown_broker {
+//   .btn {
+//     min-width: rem-calc(31);
+//     height: rem-calc(31);
+//     cursor: pointer !important;
+//   }
+
+//   .dropdown-menu {
+//     border: 0;
+//     border-radius: 0.5rem;
+//     background: $beluga;
+//     min-width: inherit;
+//   }
+//   .dropdown-menu {
+//     margin-top: 6px;
+//     right: 0px;
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       right: 5px;
+//       width: 15px;
+//       height: 9.37px;
+//       background-color: $beluga;
+//       margin-left: -9px;
+//       transform: rotate(45deg);
+//       z-index: 10;
+//       top: -2px;
+//       cursor: auto;
+//     }
+//   }
+//   .dropdown-item {
+//     line-height: rem-calc(22) !important;
+
+//     &:active {
+//       color: $primary;
+//       background-color: $doctor;
+//     }
+//     &:hover {
+//       min-width: inherit;
+//     }
+//   }
+
+//   .list-item {
+//     list-style-type: disc;
+//     display: list-item;
+//     margin-left: rem-calc(28);
+//   }
+// }

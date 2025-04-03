@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import '../../assets/scss/main.scss'
+import '../../assets/scss/main.scss';
+import '../../assets/css/bootstrap.min.css';
+import '../../assets/css/fontawesome.css';
+import '../../assets/css/animate.css';
+import '../../assets/css/swiper.min.css';
+import '../../assets/css/odometer.css';
+import '../../assets/css/nice-select.css';
+// import '../../assets/css/jquery-ui.min.css';
+import '../../assets/css/magnific-popup.css';
+import '../../assets/css/main.css';
+import '../../styles/main.scss'
+import { Toaster } from "sonner";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +40,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <Toaster
+          richColors={true}
+          closeButton={true}
+          duration={1000}
+          position="top-right"
+          className="toast-message-container"
+        />
       </body>
     </html>
   );
